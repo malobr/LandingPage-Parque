@@ -171,24 +171,40 @@
   },
   "Features": [
     {
-      "icon": "fa fa-comments-o",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+      "img": "img/1.jpeg",
+      "title": "Camiseta Dino",
+      "text": "Camiseta infantil...",
+      "description": "blablabla blablabla blablabla blablabla blablabla",
+      "price": "R$ 500,00",
+      "gallery": ["img/1.jpeg", "img/2.jpeg", "img/1.jpeg"]
+  
     },
     {
-      "icon": "fa fa-bullhorn",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+      "img": "img/2.jpeg",
+      "title": "Osso sei la oque",
+      "text": "Osso de Dinosauro...",
+      "description": "blablabla blablabla blablabla blablabla blablabla",
+      "price": "R$ 12.500,00",
+      "gallery": ["img/2.jpeg", "img/1.jpeg", "img/2.jpeg"]
+  
     },
     {
-      "icon": "fa fa-group",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+      "img": "img/1.jpeg",
+      "title": "Desvio de VErba",
+      "text": "Imposto...",
+      "description": "hahahha blablabla blablabla blablabla blablabla",
+      "price": "R$ 12.500,00",
+      "gallery": ["img/1.jpeg", "img/2.jpeg", "img/1.jpeg"]
+  
     },
     {
-      "icon": "fa fa-magic",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+      "img": "img/2.jpeg",
+      "title": "Camiseta Dinossaurus rex",
+      "text": "Camiseta infantil...",
+      "description": "blablabla blablabla blablabla blablabla blablabla",
+      "price": "R$ 12.500,00",
+      "gallery": ["img/2.jpeg", "img/1.jpeg", "img/2.jpeg"]
+  
     }
   ]
 }
