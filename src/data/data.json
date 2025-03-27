@@ -98,65 +98,75 @@
     }
   ],
   "Testimonials": [
-    {
-      "img": "img/testimonials/01.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "John Doe"
-    },
-    {
-      "img": "img/testimonials/02.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "Johnathan Doe"
-    },
-    {
-      "img": "img/testimonials/03.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "John Doe"
-    },
-    {
-      "img": "img/testimonials/04.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "Johnathan Doe"
-    },
-    {
-      "img": "img/testimonials/05.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "John Doe"
-    },
-    {
-      "img": "img/testimonials/06.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "Johnathan Doe"
-    }
+    
+      {
+          "img": "img/testimonials/01.jpg",
+          "text": "\"Uma experiência incrível! Ver os fósseis de dinossauros tão bem preservados foi fascinante.\"",
+          "name": "Carlos Mendes"
+      },
+      {
+          "img": "img/testimonials/06.jpg",
+          "text": "\"As réplicas em tamanho real e os painéis interativos fazem a visita ser muito educativa. Recomendo para toda a família!\"",
+          "name": "Fernanda Oliveira"
+      },
+      {
+          "img": "img/testimonials/03.jpg",
+          "text": "\"Nunca pensei que aprender sobre a pré-história pudesse ser tão divertido! As crianças adoraram escavar fósseis.\"",
+          "name": "Ricardo Lima"
+      },
+      {
+        "img": "img/testimonials/05.jpg",
+        "text": "\"Os dinossauros animatrônicos são impressionantes! Parece que estamos caminhando por um mundo perdido.\"",
+        "name": "Gustavo Ferreira"
+      },
+      {
+          "img": "img/testimonials/04.jpg",
+          "text": "\"O passeio guiado foi excelente. Os paleontólogos explicaram tudo de maneira envolvente e detalhada.\"",
+          "name": "Mariana Costa"
+      },
+      {
+          "img": "img/testimonials/06.jpg",
+          "text": "\"Adorei a trilha ecológica do parque. Além dos fósseis, a natureza ao redor torna tudo ainda mais especial.\"",
+          "name": "Luana Silveira"
+      }
+  
+  
   ],
   "Team": [
     {
       "img": "img/team/01.jpg",
       "name": "John Doe",
-      "job": "Director"
+      "job": "Director",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas sed sunt fugiat tenetur alias sapiente minus totam, illo perspiciatis veritatis necessitatibus?"
     },
     {
       "img": "img/team/02.jpg",
       "name": "Mike Doe",
-      "job": "Senior Designer"
+      "job": "Senior Designer",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas sed sunt fugiat tenetur alias sapiente minus totam, illo perspiciatis veritatis necessitatibus?"
+
     },
     {
       "img": "img/team/03.jpg",
       "name": "Jane Doe",
-      "job": "Senior Designer"
+      "job": "Senior Designer",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas sed sunt fugiat tenetur alias sapiente minus totam, illo perspiciatis veritatis necessitatibus?"
+
     },
     {
       "img": "img/team/04.jpg",
       "name": "Karen Doe",
-      "job": "Project Manager"
+      "job": "Project Manager",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas sed sunt fugiat tenetur alias sapiente minus totam, illo perspiciatis veritatis necessitatibus?"
+
     }
   ],
   "Contact": {
-    "address": "4321 California St, San Francisco, CA 12345 ",
-    "phone": "+1 123 456 1234",
+    "address": "R. Peabiru, 157 - Cruzeiro do Oeste, Pr, 87400-000, Brazil, Cruzeiro do Oeste, PR, 87400-000",
+    "phone": "(44) 3676-4754",
     "email": "info@company.com",
     "facebook": "fb.com",
-    "twitter": "twitter.com",
+    "instagram": "https://www.instagram.com/museudepaleontologiacdo/",
     "youtube": "youtube.com"
   },
   "Features": [

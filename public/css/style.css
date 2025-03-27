@@ -1,13 +1,5 @@
 body,
-html {
-  font-family: "Open Sans", sans-serif;
-  text-rendering: optimizeLegibility !important;
-  -webkit-font-smoothing: antialiased !important;
-  color: #777;
-  font-weight: 400;
-  width: 100% !important;
-  height: 100% !important;
-}
+
 h2,
 h3,
 h4 {
@@ -77,7 +69,6 @@ hr {
 html, body {
   margin: 0;
   padding: 0;
-  height: 100%;
 }
 
 /* Navigation */
@@ -90,10 +81,31 @@ html, body {
   transition: all 0.5s ease;
   border: none;
 }
+/* Estilo base para a logo */
+.logo-img {
+  height: 130px;        /* Padrão no topo */
+  transition: all 0.5s ease;  /* Transição suave */
+  transform: translateY(-40px);
+}
+
+/* Quando o menu tiver a classe navbar-scrolled */
+#menu.navbar-scrolled .logo-img {
+  height: 100px;        /* Menor ao fazer scroll */
+  transform: translateY(-40px);
+  filter: grayscale(100%) brightness(0.8);
+
+}
+#menu.navbar-scrolled .logo-img:hover {
+  height: 100px;        /* Menor ao fazer scroll */
+  transform: translateY(-40px);
+  filter: grayscale(0%) brightness(0.8);
+
+}
+
 
 /* Navbar no topo (transparente e alta) */
 #menu.navbar-top {
-  background: transparent;
+  background: rgba(255, 255, 255, 0);
   height: 100px;
   box-shadow: none;
 }
@@ -143,13 +155,16 @@ html, body {
 
 /* Links no topo */
 #menu.navbar-top .navbar-nav > li > a {
-  color: #fff;
+  color: #000000;
 }
 
 /* Links após scroll */
 #menu.navbar-scrolled .navbar-nav > li > a {
   color: #000;
-}
+  font-size: 13px;         /* Tamanho menor após scroll */
+  padding: 6px 6px;        /* Pode ajustar o padding se quiser aproximar mais */
+  margin: 5px 15px 0; 
+  transition: all 1s ease; }
 
 /* Linha animada embaixo do link */
 #menu .navbar-nav > li > a:after {
@@ -169,35 +184,81 @@ html, body {
 }
 
 /* Ativo */
-.navbar-nav > .active > a,
-.navbar-nav > .active > a:hover,
-.navbar-nav > .active > a:focus {
-  background-color: transparent;
-}
-
-.navbar-nav > .active > a:after,
-.navbar-nav > .active > a:hover:after,
-.navbar-nav > .active > a:focus:after {
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(to right, #ff636b 0%, #fb5c5c 100%);
-}
-
 /* Toggle botão */
 .navbar-toggle {
   border-radius: 0;
+  border: none;
+  background: rgba(255, 255, 255, 0.158);
+  padding: 10px;
 }
 
+/* Estilizando as barras do menu hambúrguer */
+.navbar-toggle .icon-bar {
+  background-color: #fff;
+  width: 22px;
+  height: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Cor do toggle após o scroll */
+#menu.navbar-scrolled .navbar-toggle .icon-bar {
+  background-color: #000;
+}
+
+/* Efeito hover do toggle */
 #menu.navbar-scrolled .navbar-toggle:hover,
 #menu.navbar-scrolled .navbar-toggle:focus {
-  background-color: #fff;
-  border-color: #fd6060;
+  background-color: transparent;
 }
 
-#menu.navbar-scrolled .navbar-toggle:hover > .icon-bar {
+#menu.navbar-scrolled .navbar-toggle:hover .icon-bar {
   background-color: #fd6060;
 }
 
+/* Exibir o menu quando expandido */
+@media (max-width: 767px) {
+  /* Estilizando a barra de navegação do menu */
+  .navbar-collapse {
+    background-color: rgba(255, 255, 255, 0.733); /* Cor de fundo para mobile */
+    border-top: none; /* Remover a borda superior */
+    padding: 20px ; /* Ajuste do padding */
+    margin-top: 0; /* Garantir que o fundo vá até o topo */
+    z-index: 999; /* Garantir que o menu sobreponha outros elementos */
+
+
+  }
+
+  /* Estilizando o menu no topo */
+  #menu.navbar-top {
+    background-color: rgba(255, 255, 255, 0); /* Cor de fundo */
+    height: 70px; /* Ajusta a altura para o mobile */
+    box-shadow: none; /* Remove sombra */
+  }
+}
+
+
+
+/* Garantir que os links fiquem visíveis no mobile */
+.navbar-collapse .navbar-nav {
+  text-align: center;
+  color: #000;
+}
+
+.navbar-collapse .navbar-nav > li {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Ajuste dos links no menu mobile */
+.navbar-collapse .navbar-nav > li > a {
+  color: #000;
+  font-size: 16px;
+  display: block;
+}
+
+#menu.navbar-scrolled .navbar-collapse .navbar-nav > li > a {
+  color: #000;
+}
 
 
 
@@ -205,6 +266,8 @@ html, body {
 
 /* Header Section */
 /* Header Section */
+
+
 .intro {
   display: table;
   width: 100%;
@@ -230,7 +293,100 @@ html, body {
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 10px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+
 }
+@media (max-width: 767px) {
+  .intro {
+    height: 80vh; /* Ajusta a altura para telas menores */
+    background-attachment: scroll; /* Remove o parallax no mobile */
+    background-position: center center;
+  }
+
+  .intro .overlay {
+    background: rgba(0, 0, 0, 0.5); /* Aumenta a opacidade para melhorar a legibilidade */
+  }
+
+  .intro h1 {
+    font-size: 36px; /* Reduz o tamanho do título para telas menores */
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 25px;
+  }
+
+  .intro p {
+    font-size: 16px; /* Ajusta o tamanho do parágrafo */
+    line-height: 24px;
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 30px;
+  }
+
+  
+
+  header .intro-text {
+    padding-top: 150px; /* Reduz a distância do topo */
+    padding-bottom: 60px; /* Ajuste inferior */
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center; /* Centraliza no mobile */
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+    overflow-x: hidden; /* Impede o deslocamento horizontal */
+  }
+
+
+
+  .intro {
+
+    width: 100%;
+    height: 100px;
+    padding: 0;
+    margin: 0;
+    background: url(../img/intro-bg.jpg) center center no-repeat;
+    background-color: #af1616;
+    background-size: cover;
+    position: relative;
+  }
+
+  .intro .overlay {
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .intro h1 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    height: 100px;
+  }
+
+  .intro p {
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  header .intro-text {
+    padding-top: 100px;
+    padding-bottom: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+  }
+}
+
+
+
+header .intro-text {
+  padding-top: 350px;
+  padding-bottom: 200px;
+  padding-left: 50px; /* para afastar do canto esquerdo */
+  text-align: left;
+}
+
 .intro h1 span {
   font-weight: 800;
   color: #fd6060;
@@ -242,30 +398,221 @@ html, body {
   line-height: 30px;
   margin: 0 auto;
   margin-bottom: 60px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 header .intro-text {
   padding-top: 350px;
   padding-bottom: 200px;
-  text-align: center;
+  padding-left: -50px;
+  text-align: left;
 }
 
-/* Features Section */
+#header .btn-custom {
+  margin: 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+#header .btn-custom:hover {
+  color: #ffffff;
+  background: #f3101020;
+}
+
+
+
+
+
+
 #features {
-  padding: 100px 0;
-  background: #f6f6f6;
+  padding: 60px 0;
+  background: #f9f9f9;
 }
-#features i.fa {
-  font-size: 38px;
+
+#features .section-title h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+#features .products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+#features .product-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+#features .product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+}
+
+#features .product-card img {
+  width: 120px;
+  height: 120px;
   margin-bottom: 20px;
-  transition: all 0.5s;
-  color: #f5dede;
-  width: 100px;
-  height: 100px;
-  padding: 30px 0;
-  border-radius: 50%;
-  background: linear-gradient(to right, #8d353a 0%, #ff0000 100%);
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  object-fit: cover;
 }
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Content */
+.modal-content {
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px;
+  width: 90%;
+  max-width: 550px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 32px;
+  color: #999;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  color: #333;
+}
+
+.modal-image {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border-radius: 12px;
+}
+
+.modal-description {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.modal-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.buy-button {
+  padding: 12px 24px;
+  background-color: #8d353a;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.buy-button:hover {
+  background-color: #6b282d;
+}
+
+/* FadeIn Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-height: 350px;
+  margin-bottom: 20px;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(141, 53, 57, 0);
+  color: #000000;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 20%;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s;
+}
+
+.carousel-button:hover {
+  background-color: rgba(255, 0, 17, 0.541);
+  color: #fff;
+}
+
+.carousel-button.left {
+  left: 10px;
+}
+
+.carousel-button.right {
+  right: 10px;
+}
+
+.modal-image {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+
+
+
+
+
 /* About Section */
 #about {
   padding: 100px 0;
@@ -284,7 +631,7 @@ header .intro-text {
   content: "";
   background: linear-gradient(to right, #69282c 0%, #ff0000 100%);
   height: 4px;
-  width: 60px;
+  width: 200px;
   bottom: 0;
   left: 0;
 }
@@ -324,17 +671,9 @@ header .intro-text {
 }
 #services h2 {
   color: #fff;
+  text-shadow: rgb(255, 255, 255) 0 0 5px;
 }
-#services .section-title h2::after {
-  position: absolute;
-  content: "";
-  background: rgba(255, 255, 255, 0.3);
-  height: 4px;
-  width: 60px;
-  bottom: 0;
-  margin-left: -30px;
-  left: 50%;
-}
+
 #services i.fa {
   font-size: 42px;
   width: 120px;
@@ -406,6 +745,10 @@ header .intro-text {
   opacity: 1;
 }
 
+
+
+
+
 /* Contact Section */
 #contact {
   padding: 100px 0 60px;
@@ -423,16 +766,9 @@ header .intro-text {
   margin-top: 10px;
   margin-bottom: 15px;
   padding-bottom: 15px;
+  text-shadow: rgb(245, 162, 162) 0 0 10px;
 }
-#contact .section-title h2::after {
-  position: absolute;
-  content: "";
-  background: rgba(255, 255, 255, 0.521);
-  height: 4px;
-  width: 60px;
-  bottom: 0;
-  left: 30px;
-}
+
 #contact h3 {
   color: #fff;
   margin-top: 80px;
@@ -449,6 +785,7 @@ header .intro-text {
 }
 #contact .btn-custom {
   margin: 30px 0;
+  color: #ffffff;
   background: transparent;
   border: 2px solid #fff;
 }
@@ -554,64 +891,7 @@ label {
   }
 }
 
-/* Testimonials Section */
-#testimonials {
-  padding: 100px 0;
-  background: #f6f6f6;
-}
-#testimonials i {
-  color: #e6e6e6;
-  font-size: 32px;
-  margin-bottom: 20px;
-}
-.testimonial {
-  position: relative;
-  padding: 20px;
-}
-.testimonial-image {
-  float: left;
-  margin-right: 15px;
-}
-.testimonial-image,
-.testimonial-image img {
-  display: block;
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-}
-.testimonial-content {
-  position: relative;
-  overflow: hidden;
-}
-.testimonial-content p {
-  margin-bottom: 0;
-  font-size: 14px;
-  font-style: italic;
-}
-.testimonial-meta {
-  margin-top: 10px;
-  font-size: 15px;
-  font-weight: 600;
-  color: #666;
-}
-/* Team Section */
-#team {
-  padding: 100px 0;
-}
-#team h4 {
-  margin: 5px 0;
-}
-#team .team-img {
-  width: 240px;
-}
-#team .thumbnail {
-  background: transparent;
-  border: 0;
-}
-#team .thumbnail .caption {
-  padding: 10px 0 0;
-  color: #888;
-}
+
 
 
 
@@ -626,3 +906,168 @@ label {
 #menu .navbar-nav > li > a:active {
   background-color: transparent !important; /* Evita qualquer fundo */
 }
+
+
+
+/* Testimonials Section */
+#testimonials {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #eaeaea, #eaeaea);
+}
+
+.section-title {
+  margin-bottom: 50px;
+}
+
+.section-title h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.section-title p {
+  font-size: 1.1rem;
+  color: #777;
+}
+
+.testimonial {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 20px;
+}
+
+.testimonial:hover {
+  transform: translateY(-5px);
+}
+
+.testimonial-image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.testimonial-image img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  padding: 5px;
+  border: 3px solid #ff9800;
+}
+
+.testimonial-content p {
+  font-size: 16px;
+  font-style: italic;
+  color: #444;
+}
+
+.testimonial-meta {
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #ff9800;
+}
+
+#team {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f7f7f7, #e3e3e3);
+  text-align: center;
+}
+
+.section-title {
+  margin-bottom: 50px;
+}
+
+.section-title h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.section-title p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.team-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.team-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ff9800;
+  margin-bottom: 15px;
+}
+
+.team-info h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.team-info p {
+  font-size: 14px;
+  color: #777;
+  font-style: italic;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #ff9800;
+}
+
+.modal-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #ff9800;
+  margin-bottom: 15px;
+}
+
