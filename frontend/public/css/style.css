@@ -871,7 +871,7 @@ html, body {
 #contact {
   display: flex;
   padding: 80px 0 60px;
-  background: linear-gradient(to right, #e2dbb1, #ffc400);
+  background: linear-gradient(to right, #e2dbb1, #ffe89c);
   color: rgba(255, 255, 255, 0.85);
   text-align: center;
   font-family: "Open Sans", sans-serif;
