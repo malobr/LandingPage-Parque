@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+
 export const Features = ({ data }) => {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

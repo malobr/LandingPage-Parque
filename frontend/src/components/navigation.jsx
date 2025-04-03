@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 
+
 export const Navigation = (props) => {
   const [scrolled, setScrolled] = useState(false);
 
