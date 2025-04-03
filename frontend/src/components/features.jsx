@@ -92,8 +92,9 @@ export const Features = ({ data }) => {
                 </p>
               )}
 
-              <button className="buy-button">Comprar</button>
-            </div>
+                <a href="#contact" className="page-scroll">
+                        Saiba mais
+              </a></div>
           </div>
         )}
       </div>

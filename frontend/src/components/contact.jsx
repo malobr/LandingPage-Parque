@@ -30,14 +30,14 @@ export const Contact = (props) => {
 
     emailjs
       .send(
-        "service_ljeg04q", // Seu Service ID
-        "template_yhap68q", // Seu Template ID
+        "zzzzzzzzzzzzzzzzzzz", // Seu Service ID
+        "yyyyyyyyyyyyyyyyy", // Seu Template ID
         {
           name: name,
           email: email,
           message: message,
         },
-        "5MJBzeBkPw_RCT4Qr" // Sua Public Key
+        "xxxxxxxxxxxxx" // Sua Public Key
       )
       .then(
         (result) => {
@@ -59,7 +59,7 @@ export const Contact = (props) => {
           <div className="new-class">
             <div className="section-title text-center">
               <h2>Entre em Contato</h2>
-              <p>
+              <p className="lead">
                 Por favor, preencha o formulário abaixo para entrar em contato conosco, responderemos o mais breve possível.
               </p>
             </div>
@@ -116,7 +116,7 @@ export const Contact = (props) => {
                 allowFullScreen 
                 loading="lazy" 
                 referrerPolicy="no-referrer-when-downgrade"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.317654851996!2d-49.249909524646625!3d-25.461066434121516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce4fde860fb43%3A0xa59bdb32148a9686!2sAdam%20Robo%20-%20F%C3%A1brica!5e0!3m2!1sen!2sbr!4v1743527721711!5m2!1sen!2sbr">
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10326.72419844559!2d-53.07894420105421!3d-23.781292398717888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f2c7de89f2c4bb%3A0xae43f44318f9f8b!2sMuseu%20de%20Paleontologia%20de%20Cruzeiro%20do%20Oeste%20Alexandre%20Gustavo%20Dobruski!5e0!3m2!1sen!2sbr!4v1743682263580!5m2!1sen!2sbr" >
               </iframe>
             </div>
           </div>
@@ -176,8 +176,8 @@ export const Contact = (props) => {
         <div className="container text-center">
           <p>
             &copy; 2025 By{' '}
-            <a href="http://www.a1.adamroboglobal.com" rel="nofollow" target="_blank">
-              AdamRobo
+            <a href="https://github.com/malobr/LandingPage-Parque" rel="nofollow" target="_blank">
+              ADS TEAM
             </a>
           </p>
         </div>

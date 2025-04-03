@@ -42,9 +42,18 @@ export const Navigation = (props) => {
             <span className="icon-bar"></span>
             <span className="icon-bar"></span>
           </button>
-          <a className="navbar-brand page-scroll" href="#page-top">
-            <img src="img/1.png" alt="Adam Robo" className="logo-img" />
-          </a>
+            <a className="navbar-brand page-scroll" href="#page-top">
+              {scrolled ? (
+                <img
+                  src="img/OIP.jpeg"
+                  alt="Geoparque Caiua"
+                  className="brand-logo"
+                />
+              ) : (
+                <p className="brand-text">Geoparque Caiua</p>
+              )}
+            </a>
+
 
 
         </div>
@@ -72,6 +81,16 @@ export const Navigation = (props) => {
             <li>
               <a href="#portfolio" className="page-scroll">
                 Galeria
+              </a>
+            </li>
+            <li>
+              <a href="#testimonials" className="page-scroll">
+                Testemunhos
+              </a>
+            </li>
+            <li>
+              <a href="#Team" className="page-scroll">
+                Equipe
               </a>
             </li>
             <li>

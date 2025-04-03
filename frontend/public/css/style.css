@@ -155,14 +155,18 @@ html, body {
 }
 
 /* Brand após scroll */
-#menu.navbar-scrolled .navbar-brand {
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  color: #000000;
-  text-transform: uppercase;
-  transition: font-size 0.3s ease, color 0.3s ease;
-  font-size: 1.5rem; /* 24px */
+
+.brand-logo {
+  width: 90px; /* Ajuste conforme necessário */
+  height: auto;
+  margin-top: -10px;
+  transition: opacity 0.3s ease-in-out;
 }
+
+.brand-text {
+  transition: opacity 0.3s ease-in-out;
+}
+
 
 /* Links padrão */
 #menu .navbar-nav > li > a {
@@ -303,7 +307,7 @@ html, body {
   height: 100vh; /* Altura da viewport inteira */
   padding: 0;
   margin: 0;
-  background: url(../img/bg.jpg) center center no-repeat;
+  background: url(../img/bg.jpeg) center center no-repeat;
   background-color: #e5e5e5;
   background-size: cover; /* Garantir que cobre toda a área */
   background-attachment: fixed; /* Efeito parallax simples (opcional) */
@@ -867,7 +871,7 @@ html, body {
 #contact {
   display: flex;
   padding: 80px 0 60px;
-  background: linear-gradient(to right, #ff0000, #1a0808);
+  background: linear-gradient(to right, #e2dbb1, #ffc400);
   color: rgba(255, 255, 255, 0.85);
   text-align: center;
   font-family: "Open Sans", sans-serif;
@@ -1067,3 +1071,170 @@ html, body {
   width: auto;
   height: auto;
 }
+
+
+
+
+/* Testimonials Section */
+#testimonials {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #eaeaea, #eaeaea);
+}
+
+.section-title {
+  margin-bottom: 50px;
+}
+
+.section-title h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.section-title p {
+  font-size: 1.1rem;
+  color: #777;
+}
+
+.testimonial {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 20px;
+}
+
+.testimonial:hover {
+  transform: translateY(-5px);
+}
+
+.testimonial-image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.testimonial-image img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  padding: 5px;
+  border: 3px solid #ff9800;
+}
+
+.testimonial-content p {
+  font-size: 16px;
+  font-style: italic;
+  color: #444;
+}
+
+.testimonial-meta {
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #ff9800;
+}
+
+#team {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f7f7f7, #e3e3e3);
+  text-align: center;
+}
+
+.section-title {
+  margin-bottom: 50px;
+}
+
+.section-title h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.section-title p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.team-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: #000 solid 1px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.team-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ff9800;
+  margin-bottom: 15px;
+}
+
+.team-info h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.team-info p {
+  font-size: 14px;
+  color: #777;
+  font-style: italic;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #ff9800;
+}
+
+.modal-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #ff9800;
+  margin-bottom: 15px;
+}
+
